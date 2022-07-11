@@ -13,7 +13,7 @@ This is a simulation platform aiming to simulate the process that finding out th
 The parameters is in "param.json" file. The default parameters are as follows:   
 {  
   "epoch":10,    
-  "data_file":"../poidata.json",    
+  "data_file":"./poidata.json",    
   "city_name":"上海市",  
   "horizon":500,   
   "veh_num":30000,   
@@ -35,4 +35,5 @@ Derectly run the following script from the directory:
 python run.py
 ```
 
-*** Note that the names of the boundary files and the city name in the parameters should be written in Chinese, because this field in the dataset is written in Chinese! ***
+***Due to the file size limitation, the dataset file in this repertory contain only a part of data. The complete dataset file can be download from https://opendata.pku.edu.cn/dataset.xhtml?persistentId=doi:10.18170/DVN/WSXCNM. You need to rename the complete dataset file to 'poidata.json' and replace the previous file.***  
+***Note that the names of the boundary files and the city name in the parameters should be written in Chinese, because this field in the dataset is written in Chinese!***
