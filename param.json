@@ -1,0 +1,8 @@
+{
+	"epoch":1,
+	"data_file":"./poidata.json",
+	"city_name":"上海市",
+	"horizon":500,
+	"veh_num":300,
+	"ite":1
+}
