@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager as fm
 import datetime
 import random
+import os
 
 lng_unit = 111111
 lat_unit = 111320
@@ -113,6 +114,8 @@ def get_PR(sort_poi):
     P_array = np.array(P_list)
     R_array = np.array(R_list)
     loc_m = np.concatenate((np.expand_dims(k_array,axis=0), np.expand_dims(P_array,axis=0), np.expand_dims(R_array,axis=0)), axis=0)
+    if not os.path.exists('./log/'):
+        os.mkdir('./log/')
     log_name = './log/P-R_log_' + datetime.date.today().strftime('%m_%d_%Y_') + datetime.datetime.now().strftime('%H_%M_%S_%f')
     np.savetxt( log_name + '.txt', loc_m, fmt='%s', delimiter='\t')
     return P_list, R_list, k_list
