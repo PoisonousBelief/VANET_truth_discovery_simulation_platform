@@ -32,6 +32,8 @@ def plot_PR(P_list, R_list, k_list):
     ax.plot(x, y)
     
     fig_dir = './curves/'
+    if not os.path.exists(fig_dir):
+        os.mkdir(fig_dir)
     fig_name = 'P-R_curve_' + datetime.datetime.now().strftime('%H_%M_%S_%f')
     plt.savefig(fig_dir+fig_name+'.eps')
     
